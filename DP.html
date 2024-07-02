@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .sidebar {
+            background-color: hsl(209, 29%, 19%);
+            color: rgb(255, 255, 255);
+            width: 40%;
+            height: 120vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: top;
+            align-items: center;
+            padding: 2em;
+            position: relative;
+        }
+        .profile-img {
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+        .titles {
+            font-size: 1.2em;
+            text-align: center;
+            position: relative;
+            height: 1.2em;
+            overflow: hidden;
+        }
+        .title {
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            animation: fade 12s infinite;
+        }
+        .title:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .title:nth-child(2) {
+            animation-delay: 4s;
+        }
+        .title:nth-child(3) {
+            animation-delay: 8s;
+        }
+        @keyframes fade {
+            0%, 33% { opacity: 1; transform: translateX(0); }
+            25%, 75% { opacity: 0; transform: translateX(100%); }
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 2em;
+            background-color: hwb(0 75% 25%);
+        }
+        .section-title {
+            color: #34495E;
+            border-bottom: 2px solid hsl(209, 29%, 19%);
+            display: inline-block;
+            margin-bottom: 1em;
+        }
+        .contact ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0.5em 0 0;
+        }
+        .contact li {
+            font-size: 1.1em;
+            margin: 0.25em 0;
+            display: flex;
+            justify-content: center;
+        }
+        .contact a {
+            color: hsl(0, 0%, 100%);
+            text-decoration: none;
+            margin-right: 1em;
+        }
+        .contact a:last-child {
+            margin-right: 0;
+        }
+        /* Certifications section */
+        #certifications {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            justify-content: left; /* Horizontal alignment */
+        }
+        .certification h3 {
+            margin: 0.5em 0;
+            color: #FFFFFF;
+        }
+        .certification p {
+            font-size: 1.1em;
+            color: #FFFFFF;
+        }
+        .certification a {
+            display: inline-block;
+            margin-top: 0.5em;
+            padding: 0.5em 1em;
+            background-color: #2C3E50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        /* Skills section */
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0.5em 0 0;
+        }
+        .skills li {
+            font-size: 1.1em;
+            margin: 0.25em 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar with the photo -->
+    <aside class="sidebar">
+        <img src="Yash2.jpg" alt="Yash Krishnarao Shinde" class="profile-img">
+        <h1 style="margin-top: 1cm;">Yash Krishnarao Shinde</h1>
+        <div class="titles">
+            <div class="title">Web Developer</div>
+            <div class="title">Cybersecurity Analyst</div>
+            <div class="title">Programmer</div>
+        </div>
+        
+        <!-- Contact Information -->
+        <section id="contact" class="contact">
+            <h2 style="color: #ECF0F1; border-bottom: 2px solid hsl(209, 29%, 19%); display: inline-block;">Contact Information</h2>
+            <ul>
+                <li>Email: shikridat.ys@gmail.com</li>
+                <li>Phone: 8976198462</li>
+                <li>
+                    <a href="https://www.linkedin.com/in/yash-shinde-2304m11d4/">LinkedIn</a>
+                    <a href="https://github.com/shindeyash2304">GitHub</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="skills">
+            <h2 style="color: #ECF0F1; border-bottom: 2px solid hsl(209, 29%, 19%); display: inline-block;">Skills</h2>
+            <ul>
+                <li>HTML & CSS, Flutter, JavaScript, React, Node.js, Python</li>
+            </ul>
+        </section>
+    </aside>
+
+    <!-- Main content area -->
+    <main class="main-content">
+        
+        <!-- Summary -->
+        <section id="summary" style="margin-bottom: 1em;">
+            <h2 class="section-title">Summary</h2>
+            <p style="font-size: 1.1em; margin-top: 0.5em;">I am Yash Krishnarao Shinde, a dedicated web developer and cybersecurity analyst with a passion for programming. With a strong foundation in cybersecurity and hands-on experience in web development, I am committed to delivering high-quality solutions and continuously enhancing my skills.</p>
+        </section>
+
+        <!-- Certifications -->
+        <section id="certifications" style="margin-bottom: 2em;">
+            <h2 class="section-title">Certifications</h2>
+            <p>
+                <div class="certification">
+                    <a href="https://drive.google.com/file/d/1TAZHRoM-66KxGSqVDet7L3rPgyds97gw/view" target="_blank">CCNA</a>
+                </div>
+                <div class="certification">
+                    <a href="https://drive.google.com/file/d/18MEBQlSxBAssjVaEt0DHDUSX0FFijEz3/view" target="_blank">CyberOps Associate</a>
+                </div>
+                <div class="certification">
+                    <a href="https://drive.google.com/file/d/1vVPSkFZxUcbbfuE1F3iKhRNWDpcXij8S/view" target="_blank">Microsoft Learning</a>
+                </div>
+                <div class="certification">
+                    <a href="https://drive.google.com/file/d/1HzdKX-_B2zqvgzmtTOGmk8WD1tyOrDxA/view" target="_blank">MSCIT</a>
+                </div>
+            </p>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" style="margin-bottom: 2em;">
+            <h2 class="section-title">Projects</h2>
+            <div style="margin-top: 1em;">
+                <h3 style="margin: 0.5em 0; color: #2C3E50;">Cost Manager</h3>
+                <p style="font-size: 1.1em;">Developed strategies for controlling project costs throughout the life cycle
+                    of a project.
+                    Coordinated with accounting department regarding payment schedules for
+                    vendors and suppliers.
+                    Performed cost analysis of existing processes to improve efficiency and
+                    reduce costs.
+                    </p>
+            </div>
+            <div style="margin-top: 2em;">
+                <h3 style="margin: 0.5em 0; color: #2C3E50;">Cybersecurity Manager</h3>
+                <p style="font-size: 1.1em;">Scheduled regular reviews of employee access privileges to prevent
+                    unauthorized access to sensitive data.
+                    Managed teams responsible for implementing new technologies that
+                    enhance overall cybersecurity posture.
+                    Trained personnel on best practices when using encryption tools or
+                    handling sensitive data.
+                    Implemented security measures such as authentication, authorization and
+                    encryption protocols for data protection.
+                    </p>
+            </div>
+        </section>
+        <div style="margin-top: 2em;">
+            <h3 style="margin: 0.5em 0; color: #2C3E50;">Frontend Developer/UI/UX Designer</h3>
+            <p style="font-size: 1.1em;">Assisted in developing a content management system from scratch using
+                MERN Stack
+                Performed unit testing of front end components written in ReactJS and
+                devices
+                Built responsive web pages optimized for different devices.
+                </p>
+        </div>
+    </section>
+
+        <!-- Resume -->
+        <section id="resume" style="margin-bottom: 2em;">
+            <h2 class="section-title">Resume</h2>
+            <a href="Yash_Shinde_Resumeo.pdf" style="display: block; text-align: center; margin-top: 1em; padding: 0.5em 1em; background-color: hsl(209, 29%, 19%); color: white; text-decoration: none; border-radius: 5px; width: fit-content; margin: 1em auto;" target="_blank">Download My Resume</a>
+        </section>
+
+    </main>
+
+</body>
+</html>
